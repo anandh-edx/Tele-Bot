@@ -24,17 +24,17 @@ from telegram.ext import (
 # 🔑 CONFIGURATION
 # =========================================================
 
+# =========================================================
+# 🔑 CONFIGURATION
+# =========================================================
+
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
+ADMIN_ID = int(os.getenv("ADMIN_ID", "1234567890"))
 
-)
+DAILY_FREE_LIMIT = 5
+STARS_PRICE = 50
 
-ADMIN_ID = int(
-    os.getenv(
-        "ADMIN_ID",
-        "7603984336"
-    )
-)
 
 # Free user daily AI limit
 DAILY_FREE_LIMIT = 5
