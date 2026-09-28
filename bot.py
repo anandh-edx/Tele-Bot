@@ -1,16 +1,10 @@
 import os
 import sqlite3
 import logging
-import asyncio
 from datetime import date
 
 from groq import Groq
-from telegram import (
-    Update,
-    LabeledPrice,
-    InlineKeyboardButton,
-    InlineKeyboardMarkup,
-)
+from telegram import Update, LabeledPrice
 from telegram.ext import (
     ApplicationBuilder,
     CommandHandler,
@@ -24,16 +18,13 @@ from telegram.ext import (
 # 🔑 CONFIGURATION
 # =========================================================
 
-# =========================================================
-# 🔑 CONFIGURATION
-# =========================================================
-
 BOT_TOKEN = os.getenv("BOT_TOKEN")
 GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 ADMIN_ID = int(os.getenv("ADMIN_ID", "1234567890"))
 
 DAILY_FREE_LIMIT = 5
 STARS_PRICE = 50
+
 
 
 # Free user daily AI limit
